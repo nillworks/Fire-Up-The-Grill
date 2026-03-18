@@ -2,25 +2,25 @@
   {
     "id": 1,
     "name": "Main Dish",
-    "image": "../src/assets/images/pngwing 4.png",
+    "image": "https://pngimg.com/uploads/food/food_PNG211.png",
     "totalItems": "(25 Main Dish)"
   },
   {
     "id": 2,
     "name": "Break Fast",
-    "image": "../src/assets/images/pngwing 6.png",
+    "image": "https://pngimg.com/uploads/breakfast/breakfast_PNG10.png",
     "totalItems": "(12 break fast)"
   },
   {
     "id": 3,
     "name": "Dessert",
-    "image": "../src/assets/images/pngwing 3.png",
+    "image": "https://pngimg.com/uploads/cake/cake_PNG131.png",
     "totalItems": "(48 Dessert)"
   },
   {
     "id": 4,
     "name": "All Food's",
-    "image": " ../src/assets/images/pngwing 7.png",
+    "image": "https://pngimg.com/uploads/food/food_PNG155.png",
     "totalItems": "(22 All Food's)"
   }
 ]

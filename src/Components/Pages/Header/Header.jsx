@@ -4,7 +4,7 @@ import Nav from './Nav';
 
 const Header = ({ HeroDataPromise }) => {
   const heroData = use(HeroDataPromise);
-  console.log(heroData);
+  // console.log(heroData);
 
   return (
     <header className="containers paddingXCustom">
