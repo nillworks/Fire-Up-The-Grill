@@ -1,21 +1,19 @@
-import { use } from "react";
+import { use } from 'react';
 
 const TrendingCategories = ({ TrendingCategoriesPromis }) => {
   const TrendingData = use(TrendingCategoriesPromis);
 
-  const TrendingCategoriesData = TrendingData.map((data) => (
+  const TrendingCategoriesData = TrendingData.map(data => (
     <div
       key={data.id}
-      className="card-body flex items-center justify-center shadow-2xl bgbla"
+      className="shadowLg rounded-3xl flex flex-col py-8 items-center justify-center shadow-2xl bgbla transition duration-300 hover:-translate-y-1 cursor-pointer"
     >
-      <img
-        src={data.image}
-        alt=""
-        className="w-70 h-70 md:w-50 md:h-50 rounded-full"
-      />
+      <div className="bg-[#DE7E55] customBorder y-10 flex flex-col items-center justify-center">
+        <img src={data.image} alt="" className="rounded-full w-[100px]" />
+      </div>
       <div className="pt-5 text-center space-y-2">
-        <h2 className="text-3xl font-bold">{data.name}</h2>
-        <p className="text-xl">{data.totalItems}</p>
+        <h2 className="text-2xl font-bold">{data.name}</h2>
+        <p className="text-lg">{data.totalItems}</p>
       </div>
     </div>
   ));
@@ -24,12 +22,14 @@ const TrendingCategories = ({ TrendingCategoriesPromis }) => {
     <>
       <div>
         <div className="mb-10 text-center">
-          <p className="text-xl font-semibold uppercase text-PrimaryColor">
+          <p className="text-lg font-semibold uppercase text-PrimaryColor">
             Best Sellers
           </p>
-          <h2 className="text-5xl font-bold">Trending Categories</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold">
+            Trending Categories
+          </h2>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 justify-center items-center">
+        <div className="grid grid-cols-1 items-stretch md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
           {TrendingCategoriesData}
         </div>
       </div>

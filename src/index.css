@@ -47,8 +47,8 @@
     background-repeat: no-repeat;
     background-size: cover;
     /* padding: 80px 0; */
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     margin: 0 auto;
     @apply lg:w-[500px] lg:h-[500px];
   }
@@ -61,5 +61,13 @@
   }
   .oderShadow {
     box-shadow: 0 15px 30px rgba(255, 81, 0, 0.3);
+  }
+  .customBorder {
+    border-radius: 9999px;
+    width: 153px;
+    height: 153px;
+  }
+  .shadowLg {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   }
 }
