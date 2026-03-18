@@ -2,10 +2,10 @@ import { Play } from 'lucide-react';
 
 const LeftHero = () => {
   return (
-    <div className="space-y-10">
+    <div className="space-y-10 sm:basis-[50%]">
       {/* left Details */}
       <div className="space-y-10">
-        <h1 className="text-4xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold ">
+        <h1 className="text-2xl sm:text-3xl  lg:text-5xl xl:text-6xl font-extrabold">
           Savor the Taste of <br />{' '}
           <span className="text-PrimaryColor">Exquisite Dishes</span>
         </h1>
