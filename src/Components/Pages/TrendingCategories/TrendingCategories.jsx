@@ -1,4 +1,8 @@
-import { use } from 'react';
+import { Fragment, use } from 'react';
+// import trending1Images from '../../../assets/images/pngwing 4.png';
+// import trending1Images from '../../../assets/images/pngwing 6.png';
+// import trending1Images from '../../../assets/images/pngwing 3.png';
+// import trending1Images from '../../../assets/images/pngwing 7.png';
 
 const TrendingCategories = ({ TrendingCategoriesPromis }) => {
   const TrendingData = use(TrendingCategoriesPromis);
@@ -20,7 +24,7 @@ const TrendingCategories = ({ TrendingCategoriesPromis }) => {
 
   return (
     <>
-      <div>
+      <Fragment>
         <div className="mb-10 text-center">
           <p className="text-lg font-semibold uppercase text-PrimaryColor">
             Best Sellers
@@ -32,7 +36,7 @@ const TrendingCategories = ({ TrendingCategoriesPromis }) => {
         <div className="grid grid-cols-1 items-stretch md:grid-cols-3 lg:grid-cols-4 gap-4 justify-center">
           {TrendingCategoriesData}
         </div>
-      </div>
+      </Fragment>
     </>
   );
 };
