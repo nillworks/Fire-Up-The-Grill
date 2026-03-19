@@ -1,0 +1,26 @@
+{
+  "hero": {
+    "title": ["Savor the Taste of", "Exquisite Dishes"],
+    "subtitle": "Where Culinary Expertise and Heartfelt Craftsmanship Come Together",
+    "buttonText": "Order Now",
+    "watchVideoText": "Watch Video",
+    "highlightText": "Exquisite Dishes",
+    "chef": {
+      "name": "Chef Image",
+      "image": "/images/hero-chef.png",
+      "tag": "Fiery Cuisine"
+    },
+    "featuredDishes": [
+      {
+        "name": "Fiery Noodles",
+        "price": 20.0,
+        "rating": 3.8
+      },
+      {
+        "name": "Vegetarian salad",
+        "price": 28.0,
+        "rating": 2.7
+      }
+    ]
+  }
+}

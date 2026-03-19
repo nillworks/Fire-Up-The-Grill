@@ -2,9 +2,9 @@ import { Star } from 'lucide-react';
 import heroImages from '../../../assets/images/heroImages.png';
 import fieryNoodles from '../../../assets/images/fieryNoodles.png';
 import fieryImages from '../../../assets/images/fieryImages.png';
+import vegetarianSaladImages from '../../../assets/images/Mask group-3.png';
 
-const RightHero = () => {
-  const rating = 3;
+const RightHero = ({ heroRightData }) => {
   return (
     <div className="sm:basis-[50%]">
       {/* images Hero */}
@@ -25,7 +25,9 @@ const RightHero = () => {
         <div className=" items-center gap-4 bg-white shadow px-4 py-2 rounded-lg hidden lg:flex">
           <img src={fieryNoodles} alt="icons" />
           <div>
-            <h2 className="text-lg font-semibold">Fiery Noodles</h2>
+            <h2 className="text-lg font-semibold">
+              {heroRightData?.hero?.featuredDishes[0].name}
+            </h2>
 
             {/* Rating */}
             <div className="flex items-center gap-1">
@@ -33,7 +35,7 @@ const RightHero = () => {
                 <Star
                   key={index}
                   className={`w-5 h-5  ${
-                    index < rating
+                    index < heroRightData?.hero?.featuredDishes[0].rating
                       ? 'text-[#FFE605] fill-[#FFE605]'
                       : 'text-[#FFE605]'
                   }`}
@@ -43,15 +45,20 @@ const RightHero = () => {
 
             {/* Price */}
             <h2 className="text-[#FF7979] text-lg font-semibold">
-              $ <span className="text-[#515151]">20</span>
+              ${' '}
+              <span className="text-[#515151]">
+                {heroRightData?.hero?.featuredDishes[0].price}
+              </span>
             </h2>
           </div>
         </div>
         {/* item 2 */}
         <div className="flex items-center gap-4 bg-white shadow px-4 py-2 rounded-lg ">
-          <img src={fieryNoodles} alt="icons" />
+          <img src={vegetarianSaladImages} alt="icons" />
           <div>
-            <h2 className="text-lg font-semibold">Fiery Noodles</h2>
+            <h2 className="text-lg font-semibold">
+              {heroRightData?.hero?.featuredDishes[1].name}
+            </h2>
 
             {/* Rating */}
             <div className="flex items-center gap-1">
@@ -59,7 +66,7 @@ const RightHero = () => {
                 <Star
                   key={index}
                   className={`w-5 h-5  ${
-                    index < rating
+                    index < heroRightData?.hero?.featuredDishes[1].rating
                       ? 'text-[#FFE605] fill-[#FFE605]'
                       : 'text-[#FFE605]'
                   }`}
@@ -69,7 +76,10 @@ const RightHero = () => {
 
             {/* Price */}
             <h2 className="text-[#FF7979] text-lg font-semibold">
-              $ <span className="text-[#515151]">20</span>
+              ${' '}
+              <span className="text-[#515151]">
+                {heroRightData?.hero?.featuredDishes[1].price}
+              </span>
             </h2>
           </div>
         </div>

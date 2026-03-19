@@ -13,12 +13,12 @@
     "featuredDishes": [
       {
         "name": "Fiery Noodles",
-        "price": "$20.00",
+        "price": 20.0,
         "rating": 4.8
       },
       {
         "name": "Vegetarian salad",
-        "price": "$28.00",
+        "price": 28.0,
         "rating": 4.7
       }
     ]
