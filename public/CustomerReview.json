@@ -6,7 +6,7 @@
   },
   "chef": {
     "name": "Our Best Chef",
-    "image": "/public/assets/shImages.png",
+    "image": "/assets/shImages.png",
     "badge": "😊"
   },
   "reviews": {
@@ -17,7 +17,7 @@
       {
         "id": 1,
         "name": "User One",
-        "avatar": "/public/assets/reviewImages.png"
+        "avatar": "/assets/reviewImages.png"
       }
     ]
   }
