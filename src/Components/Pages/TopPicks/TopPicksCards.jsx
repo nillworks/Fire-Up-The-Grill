@@ -1,8 +1,32 @@
-import { Star } from 'lucide-react';
+import { Heart, Star } from 'lucide-react';
+import { useState } from 'react';
 
 const TopPicksCards = ({ cardsDetails }) => {
+  const [favoriteItem, setFavorite] = useState(cardsDetails);
+  const isFavoriteCards = () => {
+    setFavorite(prev => ({ ...prev, isFavorite: !prev.isFavorite }));
+  };
+
   return (
-    <div className="bg-white shadow py-4 px-3 space-y-4 shadowLg rounded-[20px]">
+    <div
+      className="relative bg-white shadow py-4 px-3 space-y-8 shadowLg
+     rounded-[40px]"
+    >
+      {/* favorite Item */}
+      <div
+        className="absolute right-0 top-0 bg-PrimaryColor max-w-max p-5 rounded-bl-[40px] 
+                rounded-tr-[40px] 
+                rounded-tl-none 
+                rounded-br-none"
+      >
+        <Heart
+          onClick={isFavoriteCards}
+          className={`cursor-pointer ${
+            favoriteItem.isFavorite ? 'text-white fill-white' : 'text-white'
+          }`}
+        />
+      </div>
+
       {/* Images Cards */}
       <div className=" mx-auto ">
         <img
