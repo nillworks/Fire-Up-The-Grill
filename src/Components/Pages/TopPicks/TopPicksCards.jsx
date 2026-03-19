@@ -10,7 +10,7 @@ const TopPicksCards = ({ cardsDetails }) => {
   return (
     <div
       className="relative bg-white shadow py-4 px-3 space-y-8 shadowLg
-     rounded-[40px]"
+     rounded-[40px] transition duration-300 hover:-translate-y-1 cursor-pointer"
     >
       {/* favorite Item */}
       <div

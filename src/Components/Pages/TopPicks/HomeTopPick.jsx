@@ -23,7 +23,7 @@ const HomeTopPick = ({ dataTopPickCard }) => {
 
           {/* Slide Button */}
           <div className="flex items-center gap-5">
-            <div className="bg-PrimaryColor text-white p-3 rounded-full cursor-pointer">
+            <div className="bg-[#EFEFEF] text-[#6F6E6E] p-3 rounded-full cursor-pointer duration-300 hover:bg-PrimaryColor hover:text-white">
               <ChevronLeft />
             </div>
             <div className="bg-PrimaryColor text-white p-3 rounded-full cursor-pointer">
