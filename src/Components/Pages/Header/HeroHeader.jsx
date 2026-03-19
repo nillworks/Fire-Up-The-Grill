@@ -4,8 +4,8 @@ import RightHero from './RightHero';
 const HeroHeader = ({ heroData }) => {
   return (
     <div
-      className="flex gap-5 flex-col items-center
-     justify-around  py-30 px-3 md:flex-row relative"
+      className="flex gap-15 sm:gap-5 flex-col items-center
+     justify-around  py-10 px-3 md:flex-row relative sm:py-30"
     >
       <LeftHero HeroLeftData={heroData} />
       <RightHero heroRightData={heroData} />

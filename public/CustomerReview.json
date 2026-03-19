@@ -1,0 +1,24 @@
+{
+  "section": {
+    "subtitle": "CLIENT FEEDBACK",
+    "title": "Customer Reviews",
+    "description": "Still thinking about my Foodi dinner last night—everything was beautifully presented and perfectly served."
+  },
+  "chef": {
+    "name": "Our Best Chef",
+    "image": "/public/assets/shImages.png",
+    "badge": "😊"
+  },
+  "reviews": {
+    "label": "Customer Feedback",
+    "rating": 4.9,
+    "totalReviews": "18.6k Reviews",
+    "users": [
+      {
+        "id": 1,
+        "name": "User One",
+        "avatar": "/public/assets/reviewImages.png"
+      }
+    ]
+  }
+}
