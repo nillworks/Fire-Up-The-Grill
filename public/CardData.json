@@ -1,0 +1,56 @@
+{
+  "section": {
+    "title": "Top Picks from Our Menu",
+    "subtitle": "Chef's Specials"
+  },
+  "items": [
+    {
+      "id": 1,
+      "name": "Fattoush salad",
+      "description": "Fresh and crispy salad with herbs",
+      "price": 24.0,
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d",
+      "button": {
+        "text": "Order Now",
+        "action": "/order/fattoush"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Vegetable salad",
+      "description": "Healthy mixed vegetable salad",
+      "price": 26.0,
+      "rating": 4.6,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+      "button": {
+        "text": "Order Now",
+        "action": "/order/vegetable"
+      }
+    },
+    {
+      "id": 3,
+      "name": "Egg vegi salad",
+      "description": "Egg with fresh veggie mix",
+      "price": 23.0,
+      "rating": 4.5,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+      "button": {
+        "text": "Order Now",
+        "action": "/order/egg-vegi"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Chicken salad",
+      "description": "Grilled chicken with fresh greens",
+      "price": 28.0,
+      "rating": 4.8,
+      "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+      "button": {
+        "text": "Order Now",
+        "action": "/order/chicken"
+      }
+    }
+  ]
+}
