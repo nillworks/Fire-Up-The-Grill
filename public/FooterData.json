@@ -1,0 +1,15 @@
+{
+  "footer": {
+    "about": "Taste the Craftsmanship Behind Every Culinary Creation",
+    "links": {
+      "youNeed": ["About us", "Events", "Blogs", "FAQ"],
+      "mainMenu": ["Home", "Offers", "Menus", "Reservation"],
+      "contact": {
+        "email": "example@email.com",
+        "phone": "+64 958 248 966",
+        "social": ["Facebook", "Instagram", "Twitter", "YouTube"]
+      }
+    },
+    "copyright": "© 2026 Rohit Rafi | All rights reserved"
+  }
+}

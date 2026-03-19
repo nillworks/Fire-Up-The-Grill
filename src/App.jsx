@@ -4,6 +4,7 @@ import TrendingCategories from './Components/Pages/TrendingCategories/TrendingCa
 import AllCards from './Components/Pages/TopPicks/AllCards';
 import CustomerReviews from './Components/Pages/CustomerReviews/CustomerReviews';
 import OurJourneyServices from './Components/Pages/OurJourney&Services/OurJourneyServices';
+import Footer from './Components/Pages/Footer/Footer';
 
 // Hero Data
 const HeroDataPromise = fetch('HeroData.json').then(res => res.json());
@@ -53,6 +54,11 @@ const App = () => {
         {/* Our Journey Services data Pass */}
         <Suspense fallback={<p>loading ...</p>}>
           <OurJourneyServices OurJourneyServicesData={OurJourneyServicesData} />
+        </Suspense>
+
+        {/* FooterData.json */}
+        <Suspense fallback={<p>loading ....</p>}>
+          <Footer />
         </Suspense>
       </main>
     </Fragment>
