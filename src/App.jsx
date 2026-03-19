@@ -3,6 +3,7 @@ import Header from './Components/Pages/Header/Header';
 import TrendingCategories from './Components/Pages/TrendingCategories/TrendingCategories';
 import AllCards from './Components/Pages/TopPicks/AllCards';
 import CustomerReviews from './Components/Pages/CustomerReviews/CustomerReviews';
+import OurJourneyServices from './Components/Pages/OurJourney&Services/OurJourneyServices';
 
 // Hero Data
 const HeroDataPromise = fetch('HeroData.json').then(res => res.json());
@@ -17,6 +18,11 @@ const cardDataJson = fetch('CardData.json').then(res => res.json());
 
 // Customer Review Data
 const customerReviewData = fetch('CustomerReview.json').then(res => res.json());
+
+// Our Journey Services Data
+const OurJourneyServicesData = fetch('OurJourneyServicesData.json').then(res =>
+  res.json(),
+);
 
 const App = () => {
   return (
@@ -40,9 +46,13 @@ const App = () => {
         </Suspense>
 
         {/* Customer Reviews Section Data Pass */}
-
         <Suspense fallback={<p>Loading ....</p>}>
           <CustomerReviews customerReviewData={customerReviewData} />
+        </Suspense>
+
+        {/* Our Journey Services data Pass */}
+        <Suspense fallback={<p>loading ...</p>}>
+          <OurJourneyServices OurJourneyServicesData={OurJourneyServicesData} />
         </Suspense>
       </main>
     </Fragment>

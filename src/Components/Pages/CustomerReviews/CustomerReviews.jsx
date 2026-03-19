@@ -4,7 +4,7 @@ import RightCustomerReview from './RightCustomerReview';
 
 const CustomerReviews = ({ customerReviewData }) => {
   const useDataCustomerReview = use(customerReviewData);
-  console.log(useDataCustomerReview);
+  // console.log(useDataCustomerReview);
 
   return (
     <section className="flex flex-col items-center justify-between sm:flex-row md:py-20 ">
