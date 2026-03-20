@@ -33,7 +33,7 @@ const HomeTopPick = ({ dataTopPickCard }) => {
         </div>
       </div>
       {/* Top Picks from Our Menu Cards */}
-      <div className="grid items-stretch grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+      <div className="grid items-stretch grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {topPickAllCardData.items.map(item => (
           <TopPicksCards key={item.id} cardsDetails={item} />
         ))}
