@@ -3,24 +3,36 @@
     "id": 1,
     "name": "Main Dish",
     "image": "/assets/TrendingCategories1.png",
-    "totalItems": "(25 Main Dish)"
+    "totalItems": "(25 Main Dish)",
+    "rating": 4.5,
+    "price": 25,
+    "buttonText": "Order Now"
   },
   {
     "id": 2,
     "name": "Break Fast",
     "image": "/assets/TrendingCategories2.png",
-    "totalItems": "(12 break fast)"
+    "totalItems": "(12 break fast)",
+    "rating": 4.2,
+    "price": 15,
+    "buttonText": "Order Now"
   },
   {
     "id": 3,
     "name": "Dessert",
     "image": "/assets/TrendingCategories3.png",
-    "totalItems": "(48 Dessert)"
+    "totalItems": "(48 Dessert)",
+    "rating": 4.8,
+    "price": 20,
+    "buttonText": "Order Now"
   },
   {
     "id": 4,
     "name": "All Food's",
     "image": "/assets/TrendingCategories4.png",
-    "totalItems": "(22 All Food's)"
+    "totalItems": "(22 All Food's)",
+    "rating": 4.6,
+    "price": 30,
+    "buttonText": "Order Now"
   }
 ]

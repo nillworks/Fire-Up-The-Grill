@@ -20,7 +20,7 @@ const RightHero = ({ heroRightData }) => {
         />
       </div>
 
-      <div className="w-auto absolute bottom-16 right-15 sm:bottom-15 sm:right-15 flex flex-col gap-4 items-center sm:flex-row lg:bottom-25 lg:right-15">
+      <div className="w-auto absolute -bottom-4 right-15 sm:bottom-15 sm:right-15 flex flex-col gap-4 items-center sm:flex-row lg:bottom-25 lg:right-15">
         {/* item 1 */}
         <div className=" items-center gap-4 bg-white shadow px-4 py-2 rounded-lg hidden lg:flex">
           <img src={fieryNoodles} alt="icons" />
