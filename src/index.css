@@ -11,6 +11,7 @@
 @theme {
   --color-PrimaryColor: #f84d04;
   --color-srcColor: #df6c3b;
+  --color-ThirdColor: #de7e55;
 }
 
 @layer utilities {
