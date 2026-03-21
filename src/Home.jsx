@@ -9,7 +9,6 @@ import Footer from './Components/HomePages/Footer/Footer';
 // all data fetch same থাকবে
 const HeroDataPromise = fetch('HeroData.json').then(res => res.json());
 
-// const cardDataJson = fetch('CardData.json').then(res => res.json());
 const customerReviewData = fetch('CustomerReview.json').then(res => res.json());
 const OurJourneyServicesData = fetch('OurJourneyServicesData.json').then(res =>
   res.json(),
@@ -17,7 +16,6 @@ const OurJourneyServicesData = fetch('OurJourneyServicesData.json').then(res =>
 
 // Card Data Food
 const dataFoodApi = fetch('ShopCardData.json').then(res => res.json());
-// console.log(dataFoodApi);
 
 const Home = () => {
   return (
@@ -43,10 +41,6 @@ const Home = () => {
 
         <Suspense fallback={<p>loading ...</p>}>
           <OurJourneyServices OurJourneyServicesData={OurJourneyServicesData} />
-        </Suspense>
-
-        <Suspense fallback={<p>loading ....</p>}>
-          <Footer />
         </Suspense>
       </main>
     </Fragment>

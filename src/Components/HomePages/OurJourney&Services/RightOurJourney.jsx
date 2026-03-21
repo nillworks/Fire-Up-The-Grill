@@ -7,7 +7,8 @@ const RightOurJourney = ({ DataLeftPass }) => {
           <img src={DataLeftPass?.image} alt="icons" className="mx-auto" />
           <h2 className="text-lg font-semibold">Catering</h2>
           <p className="text-PrimaryColor">
-            Delight your guests <br /> with our flavors and <br /> presentation
+            Delight your guests <br className="hidden sm:block" /> with our
+            flavors and <br className="hidden sm:block" /> presentation
           </p>
         </div>
       </div>
