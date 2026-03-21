@@ -1,6 +1,7 @@
 import { Menu, PhoneCall, Search, ShoppingCart, X } from 'lucide-react';
 import logo from '../../../assets/images/logo.png';
 import { useState } from 'react';
+import { Link } from 'react-router';
 
 const navItems = [
   {
@@ -34,12 +35,12 @@ const Nav = () => {
   // Nav Menu
   const linkItem = navItems.map(item => (
     <li key={item.id}>
-      <a
+      <Link
         className="hover:text-PrimaryColor duration-200 font-medium"
-        href={item.path}
+        to={item.path}
       >
         {item.name}
-      </a>
+      </Link>
     </li>
   ));
 
