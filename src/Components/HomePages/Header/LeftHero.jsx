@@ -5,7 +5,7 @@ const LeftHero = ({ HeroLeftData }) => {
     <div className="space-y-5 sm:basis-[50%]">
       {/* left Details */}
       <div className="space-y-10">
-        <h1 className="text-2xl sm:text-3xl  lg:text-5xl xl:text-6xl font-extrabold">
+        <h1 className="text-4xl sm:text-4xl  lg:text-5xl xl:text-6xl font-extrabold">
           {HeroLeftData?.hero?.title[0]} <br />{' '}
           <span className="text-PrimaryColor">
             {HeroLeftData?.hero?.title[1]}
@@ -22,7 +22,7 @@ const LeftHero = ({ HeroLeftData }) => {
         <button className="oderShadow px-5 py-3 rounded-full bg-PrimaryColor text-white cursor-pointer">
           {HeroLeftData?.hero?.buttonText}
         </button>
-        <button className="  px-5 py-3 rounded-full  cursor-pointer hover:bg-PrimaryColor hover:text-white duration-300">
+        <button className="px-1 py-3 rounded-full  cursor-pointer sm:px-5 hover:bg-PrimaryColor hover:text-white duration-300">
           {HeroLeftData?.hero?.watchVideoText}
         </button>
         <button

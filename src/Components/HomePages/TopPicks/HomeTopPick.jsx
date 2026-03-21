@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const HomeTopPick = ({ dataTopPickCard }) => {
   const topPickAllCardData = use(dataTopPickCard);
+  const data = topPickAllCardData.topPicks;
   // console.log(topPickAllCardData);
 
   return (
@@ -11,14 +12,14 @@ const HomeTopPick = ({ dataTopPickCard }) => {
       {/* Top Picks Cards Title and subtitle */}
       <div className="space-y-4">
         <h6 className="uppercase text-md text-[#FF6868]">
-          {topPickAllCardData?.section?.subtitle}
+          {data?.section?.subtitle}
         </h6>
 
         {/* title and Slide Button 2 */}
         <div className="space-y-5 flex items-center justify-between pb-10">
           {/* title */}
           <h2 className="text-lg font-bold sm:text-3xl lg:text-4xl">
-            {topPickAllCardData?.section?.title}
+            {data?.section?.title}
           </h2>
 
           {/* Slide Button */}
@@ -34,9 +35,12 @@ const HomeTopPick = ({ dataTopPickCard }) => {
       </div>
       {/* Top Picks from Our Menu Cards */}
       <div className="grid items-stretch grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-        {topPickAllCardData.items.map(item => (
-          <TopPicksCards key={item.id} cardsDetails={item} />
-        ))}
+        {data.items
+          .filter(item => item.rating >= 4)
+          .slice(0, 4)
+          .map(item => (
+            <TopPicksCards key={item.id} cardsDetails={item} />
+          ))}
       </div>
     </div>
   );

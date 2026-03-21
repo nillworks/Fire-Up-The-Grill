@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router-dom';
 import App from '../../App';
 import Home from '../../Home';
-import Menu from '../Pages/MenuPages/Menu';
 import Services from './../Pages/ServicesPages/Services';
 import Offers from './../Pages/OffersPages/Offers';
 import Shop from '../Pages/ShopPage/Shop';
+import Menu from '../Pages/MenuPages/Menu';
 
 const routing = createBrowserRouter([
   {

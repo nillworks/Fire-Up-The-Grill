@@ -3,27 +3,31 @@ import ModalTrending from './ModalTrending';
 
 const TrendingCategories = ({ TrendingCategoriesPromis }) => {
   const TrendingData = use(TrendingCategoriesPromis);
+  console.log(TrendingData);
 
   const [selectedData, setSelectedData] = useState(null);
 
-  const TrendingCategoriesData = TrendingData.map(data => (
-    <div
-      key={data.id}
-      onClick={() => {
-        setSelectedData(data);
-        document.getElementById('my_modal_5').showModal();
-      }}
-      className="shadowLg rounded-3xl flex flex-col py-8 items-center justify-center shadow-2xl bgbla transition duration-300 hover:-translate-y-1 cursor-pointer"
-    >
-      <div className="bg-[#DE7E55] customBorder y-10 flex flex-col items-center justify-center">
-        <img src={data.image} alt="" className="rounded-full w-[100px]" />
+  const TrendingCategoriesData = TrendingData.trendingCategories
+    .filter(item => item.rating >= 4)
+    .slice(0, 4)
+    .map(data => (
+      <div
+        key={data.id}
+        onClick={() => {
+          setSelectedData(data);
+          document.getElementById('my_modal_5').showModal();
+        }}
+        className="shadowLg rounded-3xl flex flex-col py-8 items-center justify-center shadow-2xl bgbla transition duration-300 hover:-translate-y-1 cursor-pointer"
+      >
+        <div className="bg-[#DE7E55] customBorder y-10 flex flex-col items-center justify-center">
+          <img src={data.image} alt="" className="rounded-full w-[100px]" />
+        </div>
+        <div className="pt-5 text-center space-y-2">
+          <h2 className="text-2xl font-bold">{data.name}</h2>
+          <p className="text-lg">{data.totalItems}</p>
+        </div>
       </div>
-      <div className="pt-5 text-center space-y-2">
-        <h2 className="text-2xl font-bold">{data.name}</h2>
-        <p className="text-lg">{data.totalItems}</p>
-      </div>
-    </div>
-  ));
+    ));
 
   return (
     <>
