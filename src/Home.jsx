@@ -4,7 +4,6 @@ import TrendingCategories from './Components/HomePages/TrendingCategories/Trendi
 import AllCards from './Components/HomePages/TopPicks/AllCards';
 import CustomerReviews from './Components/HomePages/CustomerReviews/CustomerReviews';
 import OurJourneyServices from './Components/HomePages/OurJourney&Services/OurJourneyServices';
-import Footer from './Components/HomePages/Footer/Footer';
 
 // all data fetch same থাকবে
 const HeroDataPromise = fetch('HeroData.json').then(res => res.json());
