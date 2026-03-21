@@ -1,11 +1,17 @@
-import AllCards from '../../HomePages/TopPicks/AllCards';
-import NotAvailable from '../NotAvailablePage/NotAvailable';
+import { Suspense, use } from 'react';
+import MenuTopContent from './MenuTopContent';
+
+const MenuDataApi = fetch('ShopCardData.json').then(res => res.json());
 
 const Menu = () => {
+  const useMenuData = use(MenuDataApi);
+  console.log(useMenuData);
   return (
-    <>
-      <NotAvailable />
-    </>
+    <div>
+      <Suspense fallback={<p>Loading ....</p>}>
+        <MenuTopContent useMenuData={useMenuData.topPicks.items} />
+      </Suspense>
+    </div>
   );
 };
 
