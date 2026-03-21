@@ -2,6 +2,7 @@ import { Menu, PhoneCall, Search, ShoppingCart, X } from 'lucide-react';
 import logo from '../../../assets/images/logo.png';
 import { useState } from 'react';
 import { Link } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 
 const navItems = [
   {
@@ -31,6 +32,11 @@ const navItems = [
 const Nav = () => {
   // Mobile Menu
   const [open, setOpen] = useState(true);
+  const navigate = useNavigate();
+
+  const goToCart = () => {
+    navigate('/shop');
+  };
 
   // Nav Menu
   const linkItem = navItems.map(item => (
@@ -77,7 +83,7 @@ const Nav = () => {
           >
             0
           </div>
-          <ShoppingCart className="cursor-pointer" />
+          <ShoppingCart className="cursor-pointer" onClick={goToCart} />
         </div>
 
         {/* Button Lets Talk */}

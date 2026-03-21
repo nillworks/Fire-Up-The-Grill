@@ -3,7 +3,8 @@ import Nav from './Components/HomePages/Header/Nav';
 
 const App = () => {
   return (
-    <div>
+    <div className="containers paddingXCustom">
+      <Nav />
       <Outlet />
     </div>
   );
