@@ -1,6 +1,5 @@
 import { use } from 'react';
 import HeroHeader from './HeroHeader';
-import Nav from './Nav';
 
 const Header = ({ HeroDataPromise }) => {
   const heroData = use(HeroDataPromise);
@@ -8,7 +7,6 @@ const Header = ({ HeroDataPromise }) => {
 
   return (
     <header className="containers paddingXCustom">
-      <Nav />
       <HeroHeader heroData={heroData} />
     </header>
   );
