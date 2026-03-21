@@ -8,14 +8,16 @@ import Footer from './Components/HomePages/Footer/Footer';
 
 // all data fetch same থাকবে
 const HeroDataPromise = fetch('HeroData.json').then(res => res.json());
-const TrendingCategoriesPromis = fetch('TrendingCategories.json').then(res =>
-  res.json(),
-);
-const cardDataJson = fetch('CardData.json').then(res => res.json());
+
+// const cardDataJson = fetch('CardData.json').then(res => res.json());
 const customerReviewData = fetch('CustomerReview.json').then(res => res.json());
 const OurJourneyServicesData = fetch('OurJourneyServicesData.json').then(res =>
   res.json(),
 );
+
+// Card Data Food
+const dataFoodApi = fetch('ShopCardData.json').then(res => res.json());
+// console.log(dataFoodApi);
 
 const Home = () => {
   return (
@@ -28,13 +30,11 @@ const Home = () => {
 
       <main className="containers paddingXCustom">
         <Suspense fallback={<h2>Loading....</h2>}>
-          <TrendingCategories
-            TrendingCategoriesPromis={TrendingCategoriesPromis}
-          />
+          <TrendingCategories TrendingCategoriesPromis={dataFoodApi} />
         </Suspense>
 
         <Suspense fallback={<p>Loading ....</p>}>
-          <AllCards cardDataJson={cardDataJson} />
+          <AllCards cardDataJson={dataFoodApi} />
         </Suspense>
 
         <Suspense fallback={<p>Loading ....</p>}>

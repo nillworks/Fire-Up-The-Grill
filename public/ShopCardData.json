@@ -1,0 +1,199 @@
+{
+  "trendingCategories": [
+    {
+      "id": 1,
+      "name": "Main Dish",
+      "image": "/assets/TrendingCategories1.png",
+      "totalItems": "(25 Main Dish)",
+      "rating": 4.5,
+      "price": 25,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 2,
+      "name": "Break Fast",
+      "image": "/assets/TrendingCategories2.png",
+      "totalItems": "(12 break fast)",
+      "rating": 4.2,
+      "price": 15,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 3,
+      "name": "Dessert",
+      "image": "/assets/TrendingCategories3.png",
+      "totalItems": "(48 Dessert)",
+      "rating": 4.8,
+      "price": 20,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 4,
+      "name": "All Food's",
+      "image": "/assets/TrendingCategories4.png",
+      "totalItems": "(22 All Food's)",
+      "rating": 4.6,
+      "price": 30,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 5,
+      "name": "Snacks",
+      "image": "https://pixabay.com/get/gec3d774c6d49817a1f369cb49eaad2d485132b73cb06f6d53295ee9dfe247eab4b1fab3ad072dfcc5f97971fa3b28f34_1280.jpg",
+      "totalItems": "(18 Snacks)",
+      "rating": 4.1,
+      "price": 10,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 6,
+      "name": "Beverages",
+      "image": "https://pixabay.com/get/gd40f4bdccd1e9fb4a01d7dac7e9c88ba985c92c2eab8cf68a9ac617a7859d72968dce50b346dbd0db91150cbd9705381_1280.jpg",
+      "totalItems": "(20 Beverages)",
+      "rating": 4.3,
+      "price": 12,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 7,
+      "name": "Salads",
+      "image": "https://pixabay.com/get/gda8c1e2345d41db3a3b107e77381fb8d76ac2bcfc6db15957d7b187cc368d7dbef6f6808e176223d8ba946982ac9f70a_1280.jpg",
+      "totalItems": "(15 Salads)",
+      "rating": 4.0,
+      "price": 8,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 8,
+      "name": "Soups",
+      "image": "https://pixabay.com/get/gf0f8d9b7c0ef10dc664a2a640244291dfdab0fdd4ea7cb02a3a9c5d2d5d7bf493c361b768dc2b599a57c78daa0c49c143_1280.jpg",
+      "totalItems": "(12 Soups)",
+      "rating": 4.2,
+      "price": 9,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 9,
+      "name": "Pizza",
+      "image": "https://pixabay.com/get/g529ce2a0aff4204b321a2c0f9751a37cfd4999f0c8b14ab36e88b2b2813d8e7fa0cbf64c90719cd1deafce32ac80c55b_1280.jpg",
+      "totalItems": "(30 Pizza)",
+      "rating": 4.7,
+      "price": 22,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 10,
+      "name": "Burger",
+      "image": "https://pixabay.com/get/gf4f94ebc08506d3709698f17d6dd72f2a58b62f07545f4fd4adb79a853153a23abe7d3c87fa0c02adf4a285b96f137bb_1280.jpg",
+      "totalItems": "(25 Burger)",
+      "rating": 4.4,
+      "price": 18,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 11,
+      "name": "Pasta",
+      "image": "https://pixabay.com/get/g2b0b1edca463628a5ae089f9da619c7e096bb9dc6a0926808ed8bb2a952aff76c2a35d7d1b1e5d1719c43a9d80da492b_1280.jpg",
+      "totalItems": "(20 Pasta)",
+      "rating": 4.5,
+      "price": 16,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 12,
+      "name": "Ice Cream",
+      "image": "https://pixabay.com/get/g8424b52c5a89fbeb2d17f6e05d348fd3fcd5f40c5fa490f11e095eb7b70b27656fbb5bbfa9b9e97650cfa88a61ef48f2_1280.jpg",
+      "totalItems": "(22 Ice Cream)",
+      "rating": 4.8,
+      "price": 14,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 13,
+      "name": "Sushi",
+      "image": "https://pixabay.com/get/g96e4ca3dfeec6f89b0e9e9c4a2a3e0f4bb866ae1fa3ac29908e08344b7d6d089_1280.jpg",
+      "totalItems": "(10 Sushi)",
+      "rating": 4.6,
+      "price": 20,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 14,
+      "name": "Steak",
+      "image": "https://pixabay.com/get/g8c7b5eb6e7eae3c7d85ee8e2fa40ae26c2d4b8a0473505f6c1541669e9e7fce8_1280.jpg",
+      "totalItems": "(18 Steak)",
+      "rating": 4.3,
+      "price": 28,
+      "buttonText": "Order Now"
+    },
+    {
+      "id": 15,
+      "name": "Seafood",
+      "image": "https://pixabay.com/get/g395c25849bcaf3a264095f8d1a12fc6edcbdfb26007de127a659a5db9fcafb2d_1280.jpg",
+      "totalItems": "(12 Seafood)",
+      "rating": 4.5,
+      "price": 25,
+      "buttonText": "Order Now"
+    }
+  ],
+  "topPicks": {
+    "section": {
+      "title": "Top Picks from Our Menu",
+      "subtitle": "Chef's Specials"
+    },
+    "items": [
+      {
+        "id": 1,
+        "name": "Fattoush salad",
+        "description": "Fresh and crispy salad with herbs",
+        "price": 24.0,
+        "rating": 4.9,
+        "image": "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d",
+        "isFavorite": false,
+        "button": {
+          "text": "Order Now",
+          "action": "/order/fattoush"
+        }
+      },
+      {
+        "id": 2,
+        "name": "Vegetable salad",
+        "description": "Healthy mixed vegetable salad",
+        "price": 26.0,
+        "rating": 4.6,
+        "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c",
+        "isFavorite": false,
+        "button": {
+          "text": "Order Now",
+          "action": "/order/vegetable"
+        }
+      },
+      {
+        "id": 3,
+        "name": "Egg vegi salad",
+        "description": "Egg with fresh veggie mix",
+        "price": 23.0,
+        "rating": 4.5,
+        "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+        "isFavorite": false,
+        "button": {
+          "text": "Order Now",
+          "action": "/order/egg-vegi"
+        }
+      },
+      {
+        "id": 4,
+        "name": "Chicken salad",
+        "description": "Grilled chicken with fresh greens",
+        "price": 28.0,
+        "rating": 4.8,
+        "image": "https://images.unsplash.com/photo-1600891964599-f61ba0e24092",
+        "isFavorite": false,
+        "button": {
+          "text": "Order Now",
+          "action": "/order/chicken"
+        }
+      }
+    ]
+  }
+}
