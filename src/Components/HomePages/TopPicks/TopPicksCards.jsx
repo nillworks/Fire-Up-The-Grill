@@ -60,7 +60,7 @@ const TopPicksCards = ({ cardsDetails }) => {
         {/* button Order Now */}
         <div>
           <button className="btn bg-PrimaryColor text-white border-none rounded-lg w-full">
-            {cardsDetails?.button?.text}
+            {cardsDetails?.buttonText}
           </button>
         </div>
       </div>
