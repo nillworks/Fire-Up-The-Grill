@@ -1,6 +1,33 @@
 import { Trash2 } from 'lucide-react';
+import CardHooks from './../../Hooks/CardHooks';
 
 const CardDetails = ({ ShopItemData }) => {
+  // context Api Use
+  const { setSelectedItem } = CardHooks();
+
+  // Increment Product Quantity
+  const incrementQty = id => {
+    setSelectedItem(prev =>
+      prev.map(item =>
+        item.id === id ? { ...item, qty: item.qty + 1 } : item,
+      ),
+    );
+  };
+
+  // decrement Product Quantity
+  const decrementQty = id => {
+    setSelectedItem(prev =>
+      prev.map(item =>
+        item.id === id && item.qty > 1 ? { ...item, qty: item.qty - 1 } : item,
+      ),
+    );
+  };
+
+  // Deletes Function
+  const handleDelete = id => {
+    setSelectedItem(prev => prev.filter(item => item.id !== id));
+  };
+
   return (
     <div>
       {/* Item 1 */}
@@ -18,21 +45,46 @@ const CardDetails = ({ ShopItemData }) => {
               {ShopItemData?.name}
             </h3>
             <p className="text-sm text-gray-500">{ShopItemData?.description}</p>
-            <p className="text-sm font-medium text-gray-700 mt-1">
-              {ShopItemData?.price}
+            <p className="text-sm font-medium text-orange-400 mt-1">
+              ${ShopItemData?.price}
             </p>
           </div>
         </div>
 
         {/* Right */}
-        <div className="flex items-center gap-4">
-          <div className="px-4 py-1 bg-gray-100 rounded-lg text-sm font-medium">
-            1
+        <div className="flex flex-col items-center gap-4 sm:flex-row">
+          {/* Quantity */}
+
+          <div className="flex items-center gap-3 bg-gray-100 px-4 py-2 rounded-full w-max">
+            <button
+              onClick={() => decrementQty(ShopItemData.id)}
+              className="w-8 h-8 flex items-center justify-center cursor-pointer bg-white rounded-full shadow hover:bg-gray-200 transition"
+            >
+              -
+            </button>
+
+            <button
+              onClick={() => incrementQty(ShopItemData.id)}
+              className="w-8 h-8 flex items-center justify-center bg-PrimaryColor text-white rounded-full shadow
+            cursor-pointer hover:opacity-80 transition"
+            >
+              +
+            </button>
           </div>
 
-          <button className="text-gray-400 hover:text-red-500">
-            <Trash2 size={18} />
-          </button>
+          {/* Total Quantity */}
+          <div className="flex items-center gap-4">
+            <div className="px-4 py-1 bg-gray-100 rounded-lg text-sm font-medium">
+              {ShopItemData.qty}x
+            </div>
+
+            <button
+              onClick={() => handleDelete(ShopItemData.id)}
+              className="text-gray-400 cursor-pointer duration-200 hover:text-red-500"
+            >
+              <Trash2 size={18} />
+            </button>
+          </div>
         </div>
       </div>
     </div>

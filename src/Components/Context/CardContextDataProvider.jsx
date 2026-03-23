@@ -27,7 +27,7 @@ const CardContextDataProvider = ({ children }) => {
       if (exists) {
         return prev;
       } else {
-        return [...prev, item];
+        return [...prev, { ...item, qty: 1 }];
       }
     });
     MoneyAdd(item);

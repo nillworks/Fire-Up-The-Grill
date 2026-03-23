@@ -1,4 +1,34 @@
+import CardHooks from '../../Hooks/CardHooks';
+
 const CardOrderSummary = () => {
+  const { selectedItem } = CardHooks();
+
+  // Sub total Price
+  const subtotal = selectedItem.reduce(
+    (total, item) => total + item.price * item.qty,
+    0,
+  );
+
+  let delivery = 0;
+
+  if (selectedItem.length === 0) {
+    delivery = 0;
+  } else if (subtotal < 100) {
+    delivery = 1.3;
+  } else {
+    delivery = -1.4;
+  }
+
+  let tax = 0;
+  if (selectedItem.length === 0) {
+    tax = 0;
+  } else if (subtotal < 100) {
+    tax = 1.1;
+  } else {
+    tax = 2.5;
+  }
+  const total = subtotal + delivery + tax;
+
   return (
     <div className="max-w-sm mx-auto bg-white rounded-2xl shadow-md p-6">
       {/* Title */}
@@ -10,17 +40,23 @@ const CardOrderSummary = () => {
       <div className="space-y-2 text-sm text-gray-600">
         <div className="flex justify-between">
           <span>Subtotal</span>
-          <span className="font-medium text-gray-800">$61.50</span>
+          <span className="font-medium text-gray-800">${subtotal}</span>
         </div>
 
         <div className="flex justify-between">
           <span>Delivery Fee</span>
-          <span className="font-medium text-gray-800">$4.50</span>
+          <span className="font-medium text-gray-800">
+            {selectedItem.length === 0
+              ? '$0'
+              : subtotal >= 100
+                ? '$1.4'
+                : '$1.3'}
+          </span>
         </div>
 
         <div className="flex justify-between">
           <span>Taxes</span>
-          <span className="font-medium text-gray-800">$5.25</span>
+          <span className="font-medium text-gray-800">${tax}</span>
         </div>
       </div>
 
@@ -30,7 +66,9 @@ const CardOrderSummary = () => {
       {/* Total */}
       <div className="flex justify-between items-center mb-4">
         <span className="text-gray-700 font-medium">Total</span>
-        <span className="text-PrimaryColor font-bold text-lg">$71.25</span>
+        <span className="text-PrimaryColor font-bold text-lg">
+          ${total.toFixed(2)}
+        </span>
       </div>
 
       {/* Promo Code */}
