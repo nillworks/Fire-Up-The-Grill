@@ -19,6 +19,7 @@ const CardOrderSummary = () => {
     delivery = -1.4;
   }
 
+  // Text count
   let tax = 0;
   if (selectedItem.length === 0) {
     tax = 0;
