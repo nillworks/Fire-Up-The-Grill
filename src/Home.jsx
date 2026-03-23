@@ -5,16 +5,13 @@ import AllCards from './Components/HomePages/TopPicks/AllCards';
 import CustomerReviews from './Components/HomePages/CustomerReviews/CustomerReviews';
 import OurJourneyServices from './Components/HomePages/OurJourney&Services/OurJourneyServices';
 
-// all data fetch same থাকবে
+// all data fetch same
 const HeroDataPromise = fetch('HeroData.json').then(res => res.json());
 
 const customerReviewData = fetch('CustomerReview.json').then(res => res.json());
 const OurJourneyServicesData = fetch('OurJourneyServicesData.json').then(res =>
   res.json(),
 );
-
-// Card Data Food
-const dataFoodApi = fetch('ShopCardData.json').then(res => res.json());
 
 const Home = () => {
   return (
@@ -27,11 +24,11 @@ const Home = () => {
 
       <main className="containers paddingXCustom">
         <Suspense fallback={<h2>Loading....</h2>}>
-          <TrendingCategories TrendingCategoriesPromis={dataFoodApi} />
+          <TrendingCategories />
         </Suspense>
 
         <Suspense fallback={<p>Loading ....</p>}>
-          <AllCards cardDataJson={dataFoodApi} />
+          <AllCards />
         </Suspense>
 
         <Suspense fallback={<p>Loading ....</p>}>

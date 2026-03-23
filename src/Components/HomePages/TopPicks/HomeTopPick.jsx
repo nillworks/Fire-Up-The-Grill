@@ -1,11 +1,13 @@
-import React, { use } from 'react';
 import TopPicksCards from './TopPicksCards';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import CardHooks from '../../Hooks/CardHooks';
 
-const HomeTopPick = ({ dataTopPickCard }) => {
-  const topPickAllCardData = use(dataTopPickCard);
-  const data = topPickAllCardData.topPicks;
-  // console.log(topPickAllCardData);
+const HomeTopPick = () => {
+  // Card Data Use Custom Hooks
+  const { menuData } = CardHooks();
+  const data = menuData.topPicks;
+
+  // Card Render
 
   return (
     <div className="paddingXl">
