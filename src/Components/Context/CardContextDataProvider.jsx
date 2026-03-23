@@ -1,5 +1,7 @@
 import { use, useState } from 'react';
 import CardItemContext from './CardItemContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // All CardData Fetch
 const ShopCardData = fetch('ShopCardData.json').then(res => res.json());
@@ -14,6 +16,9 @@ const CardContextDataProvider = ({ children }) => {
   // Shop Page Data Render Handle Order Now Button
   const [selectedItem, setSelectedItem] = useState([]);
 
+  // Oder Button Click Show Toast Success
+  const MoneyAdd = item => toast.success(`${item.name} added to cart!`);
+
   const handleOrderNow = item => {
     setSelectedItem(prev => {
       // check already exist
@@ -25,6 +30,7 @@ const CardContextDataProvider = ({ children }) => {
         return [...prev, item];
       }
     });
+    MoneyAdd(item);
   };
 
   console.log(selectedItem);

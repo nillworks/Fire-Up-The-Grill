@@ -5,6 +5,8 @@ import Services from './../Pages/ServicesPages/Services';
 import Offers from './../Pages/OffersPages/Offers';
 import Shop from '../Pages/ShopPage/Shop';
 import Menu from '../Pages/MenuPages/Menu';
+import { Suspense } from 'react';
+import LoadingSpinner from '../ReuseComponents/LoadingSpinner';
 
 const routing = createBrowserRouter([
   {
@@ -13,23 +15,43 @@ const routing = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <Home />,
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Home />
+          </Suspense>
+        ),
       },
       {
         path: '/menu',
-        element: <Menu />,
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Menu />
+          </Suspense>
+        ),
       },
       {
         path: '/services',
-        element: <Services />,
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Services />
+          </Suspense>
+        ),
       },
       {
         path: '/offers',
-        element: <Offers />,
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Offers />
+          </Suspense>
+        ),
       },
       {
         path: '/shop',
-        element: <Shop />,
+        element: (
+          <Suspense fallback={<LoadingSpinner />}>
+            <Shop />
+          </Suspense>
+        ),
       },
     ],
   },
