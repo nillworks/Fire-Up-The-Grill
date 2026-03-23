@@ -1,8 +1,11 @@
-import React, { useState } from 'react';
-import HomeTopPick from '../TopPicks/HomeTopPick';
+import { useState } from 'react';
 import { Star, Heart } from 'lucide-react';
+import CardHooks from '../../Hooks/CardHooks';
 
 const ModalTrending = ({ selectedData }) => {
+  // Order Now Button Handle
+  const { handleOrderNow } = CardHooks();
+
   const [favoriteItem, setFavorite] = useState(false);
   const isFavoriteCards = () => {
     setFavorite(!favoriteItem);
@@ -65,7 +68,10 @@ const ModalTrending = ({ selectedData }) => {
 
               {/* button Order Now */}
               <div>
-                <button className="btn bg-ThirdColor text-white border-none rounded-lg w-full outline-none">
+                <button
+                  onClick={() => handleOrderNow(selectedData)}
+                  className="btn bg-ThirdColor text-white border-none rounded-lg w-full outline-none"
+                >
                   {selectedData?.buttonText}
                 </button>
               </div>

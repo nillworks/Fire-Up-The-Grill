@@ -1,7 +1,11 @@
 import { Heart, Star } from 'lucide-react';
 import { useState } from 'react';
+import CardHooks from '../../Hooks/CardHooks';
 
 const TopPicksCards = ({ cardsDetails }) => {
+  // Order Now Button handle
+  const { handleOrderNow } = CardHooks();
+
   const [favoriteItem, setFavorite] = useState(cardsDetails);
   const isFavoriteCards = () => {
     setFavorite(prev => ({ ...prev, isFavorite: !prev.isFavorite }));
@@ -59,8 +63,11 @@ const TopPicksCards = ({ cardsDetails }) => {
 
         {/* button Order Now */}
         <div>
-          <button className="btn bg-PrimaryColor text-white border-none rounded-lg w-full">
-            {cardsDetails?.button?.text}
+          <button
+            onClick={() => handleOrderNow(cardsDetails)}
+            className="btn bg-PrimaryColor text-white border-none rounded-lg w-full"
+          >
+            {cardsDetails?.buttonText}
           </button>
         </div>
       </div>

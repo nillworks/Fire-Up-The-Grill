@@ -1,20 +1,10 @@
 import { Heart, Star } from 'lucide-react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router';
+import CardHooks from '../../Hooks/CardHooks';
 
 const MenuCard = ({ menuData }) => {
-  const navigate = useNavigate();
-  const handleOrder = item => {
-    let existingCart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    const updatedCart = [...existingCart, item];
-
-    // save
-    localStorage.setItem('cart', JSON.stringify(updatedCart));
-
-    // navigate
-    navigate('/shop');
-  };
+  // Order Now Button Data handle
+  const { handleOrderNow } = CardHooks();
 
   const [favoriteItem, setFavorite] = useState(menuData);
   const isFavoriteCards = () => {
@@ -75,7 +65,7 @@ const MenuCard = ({ menuData }) => {
           {/* button Order Now */}
           <div>
             <button
-              onClick={() => handleOrder(menuData)}
+              onClick={() => handleOrderNow(menuData)}
               className="btn bg-PrimaryColor text-white border-none rounded-lg w-full"
             >
               {menuData?.buttonText}

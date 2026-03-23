@@ -3,6 +3,7 @@ import logo from '../../../assets/images/logo.png';
 import { useState } from 'react';
 import { Link } from 'react-router';
 import { useNavigate } from 'react-router-dom';
+import CardHooks from '../../Hooks/CardHooks';
 
 const navItems = [
   {
@@ -30,6 +31,9 @@ const navItems = [
 ];
 
 const Nav = () => {
+  const { selectedItem } = CardHooks();
+  const lengthCardOrder = selectedItem.length;
+
   // Mobile Menu
   const [open, setOpen] = useState(true);
 
@@ -81,7 +85,7 @@ const Nav = () => {
 
           <div className="relative">
             <div className="absolute -top-3 right-0 bg-white text-black px-1 rounded-full text-xs">
-              0
+              {lengthCardOrder}
             </div>
             <ShoppingCart
               onClick={() => {
@@ -121,7 +125,7 @@ const Nav = () => {
             className="absolute -top-4 right-1 leftPadding bg-PrimaryColor
            text-white  px-1 rounded-full text-sm"
           >
-            0
+            {lengthCardOrder}
           </div>
           <ShoppingCart className="cursor-pointer" onClick={goToCart} />
         </div>

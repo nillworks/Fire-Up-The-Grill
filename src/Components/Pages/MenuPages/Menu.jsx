@@ -1,11 +1,12 @@
-import { Suspense, use } from 'react';
+import { Suspense } from 'react';
 import MenuTopContent from './MenuTopContent';
-
-const MenuDataApi = fetch('ShopCardData.json').then(res => res.json());
+import CardHooks from '../../Hooks/CardHooks';
 
 const Menu = () => {
-  const useMenuData = use(MenuDataApi);
-  console.log(useMenuData);
+  // Card Data Pass
+  const { menuData } = CardHooks();
+  const useMenuData = menuData;
+
   return (
     <div>
       <Suspense fallback={<p>Loading ....</p>}>

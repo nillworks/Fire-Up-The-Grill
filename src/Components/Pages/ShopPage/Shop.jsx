@@ -1,10 +1,12 @@
 // import { useLocation } from 'react-router';
 import CardOrderSummary from './CardOrderSummary';
 import CardDetails from './CardDetails';
+import CardHooks from '../../Hooks/CardHooks';
 
 const Shop = () => {
-  const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
-  console.log(cartItems);
+  // Order Now Item Render Shop Page
+  const { selectedItem } = CardHooks();
+  const cartItems = selectedItem;
 
   return (
     <div className="py-20 space-y-4">
