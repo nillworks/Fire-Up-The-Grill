@@ -1,13 +1,14 @@
-import { Fragment, use, useState } from 'react';
+import { Fragment, useState } from 'react';
 import ModalTrending from './ModalTrending';
+import CardHooks from '../../Hooks/CardHooks';
 
-const TrendingCategories = ({ TrendingCategoriesPromis }) => {
-  const TrendingData = use(TrendingCategoriesPromis);
-  console.log(TrendingData);
+const TrendingCategories = () => {
+  // Data Trending Trending Categories use Context Api
+  const { menuData } = CardHooks();
 
   const [selectedData, setSelectedData] = useState(null);
 
-  const TrendingCategoriesData = TrendingData.trendingCategories
+  const TrendingCategoriesData = menuData.trendingCategories
     .filter(item => item.rating >= 4)
     .slice(0, 4)
     .map(data => (

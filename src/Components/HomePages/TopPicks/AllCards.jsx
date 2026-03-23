@@ -1,9 +1,9 @@
 import HomeTopPick from './HomeTopPick';
 
-const AllCards = ({ cardDataJson }) => {
+const AllCards = () => {
   return (
     <div>
-      <HomeTopPick dataTopPickCard={cardDataJson} />
+      <HomeTopPick />
     </div>
   );
 };

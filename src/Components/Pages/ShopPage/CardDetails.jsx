@@ -14,16 +14,20 @@ const CardDetails = ({ ShopItemData }) => {
           />
 
           <div>
-            <h3 className="font-semibold text-gray-800">Spicy Salmon Bowl</h3>
-            <p className="text-sm text-gray-500">Main Dish</p>
-            <p className="text-sm font-medium text-gray-700 mt-1">$18.50</p>
+            <h3 className="font-semibold text-gray-800">
+              {ShopItemData?.name}
+            </h3>
+            <p className="text-sm text-gray-500">{ShopItemData?.description}</p>
+            <p className="text-sm font-medium text-gray-700 mt-1">
+              {ShopItemData?.price}
+            </p>
           </div>
         </div>
 
         {/* Right */}
         <div className="flex items-center gap-4">
           <div className="px-4 py-1 bg-gray-100 rounded-lg text-sm font-medium">
-            2
+            1
           </div>
 
           <button className="text-gray-400 hover:text-red-500">
